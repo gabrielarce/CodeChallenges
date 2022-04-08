@@ -20,3 +20,16 @@ function bmi(weight, height) {
 }
 
 console.log(`${bmi(150, 1.80)}, should equal "Obese"`)
+
+// Calculate average
+
+// Write a function which calculates the average of the numbers in a given list.
+// Note: Empty arrays should return 0.
+
+function find_average(array) {
+    if (array.length > 0) {
+        return (array.reduce((previousValue, currentValue) => previousValue + currentValue, 0)) / array.length
+    } else {
+        return 0
+    }
+}
