@@ -38,3 +38,6 @@ function fakeBin(x) {
 }
 
 console.log(`Fakebin function answer ${fakeBin('45385593107843568')} should be equal to '01011110001100111' `)
+
+
+//Some random change to the file
