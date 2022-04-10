@@ -20,9 +20,7 @@ const reverseSeq = n => {
 // chemical structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
 
 // Create a function which translates a given DNA string into RNA.
-
 // For example:
-
 // "GCAT"  =>  "GCAU"
 // The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
 
@@ -32,3 +30,13 @@ function DNAtoRNA(dna) {
 
 
 // ---------------------------------------------------//
+
+// You only need one - Beginner
+
+// You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+// Array can contain numbers or strings. X can be either.
+// Return true if the array contains the value, false if not.
+
+function check(a, x) {
+    return a.includes(x)
+}
