@@ -11,18 +11,18 @@
 // If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
 
 function sumArray(array) {
-
-    if (array == null || array.length <= 2) {
+    if (!array || array.length <= 2) {
         return 0
     }
 
-    var max = Math.max.apply(Math, array);
-    var min = Math.min.apply(Math, array);
-    var sum = 0
+    array.sort(function(a, b) {
+        return a - b
+    });
+    array.pop();
+    array.shift();
+    return array.reduce((acc, curr) => acc + curr, 0)
 
-    for (i = 0; i < array.length; i++) {
-        sum += array[i];
-    }
-
-    return sum - max - min
 }
+
+console.log(sumArray([1, 2, 3, 4]))
+console.log(sumArray([-1, 1, 2, 3, 4]))
