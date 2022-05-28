@@ -9,3 +9,8 @@
 let getAge = (inputString) => {
     return parseInt(inputString)
 }
+
+console.log(getAge("4 years old"))
+console.log(getAge(" I am 5 years old"))
+console.log(getAge("11 years old"))
+console.log(getAge("9 years old"))
