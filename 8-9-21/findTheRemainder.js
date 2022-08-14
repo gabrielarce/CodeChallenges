@@ -22,8 +22,7 @@
 // result - division by zero (refer to the specifications on how to handle this in your language)
 
 function remainder(n, m) {
-    let arr = []
-    n > m ? arr.push(n, m) : arr.push(m, n)
 
-    return arr[0] % arr[1]
+    return n > m ? n % m : m % n
+
 }
