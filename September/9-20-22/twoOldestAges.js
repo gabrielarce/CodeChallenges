@@ -9,3 +9,12 @@
 // [1, 2, 10, 8] --> [8, 10]
 // [1, 5, 87, 45, 8, 8] --> [45, 87]
 // [1, 3, 10, 0]) --> [3, 10]
+
+// return the two oldest/oldest ages within the array of ages passed in.
+function twoOldestAges(ages) {
+    let sorted = ages.sort((a, b) => a - b)
+    let secondOldest = sorted[ages.length - 2]
+    let oldest = sorted[ages.length - 1]
+
+    return [secondOldest, oldest]
+}
