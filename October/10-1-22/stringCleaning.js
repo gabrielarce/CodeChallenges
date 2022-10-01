@@ -12,7 +12,7 @@
 function stringClean(s) {
     let cleanedS = "";
     for (let i = 0; i < s.length; i++) {
-        if (s.charCodeAt(i) < 48 || s.charCodeAt(i) > 59) {
+        if (s.charCodeAt(i) < 48 || s.charCodeAt(i) > 57) {
             cleanedS += s[i]
         }
     }
