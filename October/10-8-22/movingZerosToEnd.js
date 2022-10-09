@@ -5,14 +5,12 @@
 
 
 function moveZeros(arr) {
-    let filtered = arr.filter((el) => {
+    let noZeros = arr.filter((el) => {
         return el !== 0
-    })
-    let arr2 = [];
+    });
+    let zeros = arr.filter((el) => {
+        return el === 0
+    });
 
-    for (let i = 0; i < (arr.length - filtered.length); i++) {
-        arr2.push(0)
-    }
-
-    return filtered.concat(arr2)
+    return noZeros.concat(zeros)
 }
