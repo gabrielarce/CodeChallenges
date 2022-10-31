@@ -11,5 +11,5 @@ function solution(str) {
         result.push(str.slice(end - 2, end))
     }
     if (str.length % 2 != 0) result.push(str.slice(-1) + "_")
-    return
+    return result
 }
