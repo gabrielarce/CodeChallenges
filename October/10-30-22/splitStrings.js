@@ -6,6 +6,10 @@
 // * 'abcdef' => ['ab', 'cd', 'ef']
 
 function solution(str) {
-    let [start, finish] = [0, 2]
-
+    let result = []
+    for (let end = 2; end <= str.length; end += 2) {
+        result.push(str.slice(end - 2, end))
+    }
+    if (str.length % 2 != 0) result.push(str.slice(-1) + "_")
+    return
 }
