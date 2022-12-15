@@ -28,24 +28,6 @@
  * @param {number[]} nums
  * @return {number}
  */
-/**
- * @param {number[]} nums
- * @return {number}
- */
 var majorityElement = function(nums) {
-    let hash = {},
-        highest = nums[0]
-    for (let i = 0; i < nums.length; i++) {
-        if (hash[nums[i]]) {
-            hash[nums[i]]++
-        } else {
-            hash[nums[i]] = 1
-        }
-    }
-    for (const prop in hash) {
-        if (hash[prop] >= highest) {
-            highest = prop
-        }
-    }
-    return highest
+    return sorted = nums.sort((a, b) => { return a - b })[Math.floor((nums.length - 1) / 2)]
 };
