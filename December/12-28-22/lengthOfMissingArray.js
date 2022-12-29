@@ -20,9 +20,13 @@
 // I have created other katas. Have a look if you like coding and challenges.
 
 function getLengthOfMissingArray(arrayOfArrays) {
-    if (!arrayOfArrays) return 0;
-    if (arrayOfArrays.length == 0 || arrayOfArrays.length == 1) return 0;
-    let lengths = arrayOfArrays.map(el => el.length).sort()
+    if (!arrayOfArrays || arrayOfArrays.length == 0) return 0;
+    let lengths = [];
+    for (let i = 0; i < arrayOfArrays.length; i++) {
+        if (!arrayOfArrays[i]) return 0;
+        lengths.push(arrayOfArrays[i].length)
+    }
+    lengths.sort((a, b) => a - b)
     let missing
     for (let i = 0; i < lengths.length; i++) {
         if (lengths[i] == 0) return 0
@@ -31,6 +35,5 @@ function getLengthOfMissingArray(arrayOfArrays) {
             break;
         }
     }
-    console.log(lengths, missing)
     return missing
 }
