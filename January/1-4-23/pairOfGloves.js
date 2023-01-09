@@ -20,6 +20,5 @@ function numberOfPairs(gloves) {
     for (const prop in counts) {
         pairs += Math.floor(counts[prop] / 2)
     }
-
     return pairs
 }
