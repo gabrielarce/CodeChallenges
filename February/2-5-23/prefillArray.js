@@ -21,3 +21,11 @@
 
 //     prefill("xyz", 1)
 //       --> throws TypeError with message "xyz is invalid"
+
+function prefill(n, v) {
+    if (isNaN(n) || n < 0 || n % 1 !== 0 || typeof n == "boolean") {
+        throw new TypeError(n + " is invalid");
+    }
+    if (n == 0) return [];
+    return Array(n).fill(v);
+}
