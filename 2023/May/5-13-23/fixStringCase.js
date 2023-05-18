@@ -29,35 +29,3 @@ function solve(s) {
         return s.toUpperCase();
     }
 }
-
-// const _ = require('lodash');
-
-// describe("Basic tests", function(){
-// Test.assertEquals(solve("code"),"code");
-// Test.assertEquals(solve("CODe"),"CODE");
-// Test.assertEquals(solve("COde"),"code");
-// Test.assertEquals(solve("Code"),"code");
-// });
-
-// describe("Random tests", function(){
-// let letters = ["abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-// for (let i = 0; i < 100; i++) {
-//   let res = '';
-//   for (let j = 0; j < 100; ++j){
-//     let opt = _.random(0,1), lett = _.random(0,25);
-//     res += letters[opt][lett]
-//   }
-//     let exp = kj346tr(res);
-//     Test.assertEquals(solve(res),exp);
-//  }
-
-//   let r0 = _.random(15,25);
-//   let x = letters[0].slice(0,r0) + letters[1].slice(0,r0);
-//   let exp = kj346tr(x);
-//   Test.assertEquals(solve(x),exp);
-// })
-// function kj346tr(s){
-//     let a = 0, b = 0;
-//     for (let i of s) i == i.toUpperCase() ? b++ : a++;
-//     return a >= b ? s.toLowerCase() : s.toUpperCase();
-// }
